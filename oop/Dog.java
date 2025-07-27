@@ -1,38 +1,31 @@
 
-public class Dog {
-	private String name;
-	private boolean isPet;
-	private String owner;
-	// Default Constructor
-	public Dog() {
-		this.name ="";
-		this.isPet=false;
-		this.owner="";
+public class Dog extends DogAbstract implements DogInterface {
+	@Override
+	public void eat() {
+		System.out.println(bark("Woof"));
+		System.out.println("Yum Yum");	
 	}
-	//Overloaded constructor
-	public Dog(String name, boolean isPet, String owner)
-	{
-		this.name  = name;
-		this.isPet = isPet;
-		this.owner = owner;
+	@Override
+	public void sleeps() {
+		System.out.println("ZZZZ....");
 	}
-	//setters and getters
-	public String getName() {
-		return name;
+	public static void main(String[] args) {
+		Dog dog1 = new Dog();
+		dog1.eat();
 	}
-	public boolean isPet() {
-		return isPet;
+	@Override
+	public String sing() {
+		
+		return null;
 	}
-	public String getOwner() {
-		return owner;
+	@Override
+	public void grow() {
+		
+		
 	}
-	public void setName(String name) {
-		this.name = name;
+	@Override
+	public void dance() {
+		
 	}
-	public void isPet(boolean isPet) {
-		this.isPet =isPet;
-	}
-	public void setOwner(String owner) {
-		this.owner = owner;
-	}
+
 }
